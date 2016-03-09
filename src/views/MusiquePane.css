@@ -1,0 +1,7 @@
+
+.DragOver
+{
+	-fx-background-color : #ddd;
+	-fx-effect: innershadow(gaussian, black, 20, 0.6, 0, 0);
+}
+

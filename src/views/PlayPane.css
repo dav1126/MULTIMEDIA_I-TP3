@@ -1,0 +1,67 @@
+
+#areaMetadata
+{
+	-fx-font-weight : normal;
+	-fx-text-fill : gray;
+	-fx-control-inner-background: -fx-base; 
+}
+
+#areaMetadata .content
+{
+	-fx-control-inner-background: -fx-base;
+}
+
+#hboxProgres
+{
+	-fx-spacing:0px;
+	-fx-alignment:top-center;
+}
+
+#lblFichier
+{
+	-fx-text-fill:red;
+}
+
+#sldrVolume
+{
+	-fx-control-inner-background: -fx-base;
+}
+
+#txtLecture
+{
+	-fx-color : gray;
+}
+
+#txtVolume
+{
+	-fx-color : gray;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(to bottom, 
+            #000000,
+            #aa0000,
+            #000000
+          );
+}
+.progress-bar:indeterminate > .bar {
+    -fx-background-color: #000000;
+}
+
+.progress-bar > .track {
+       -fx-background-color: #000000;
+}
+
+.progress-indicator > .determinate-indicator > .indicator {
+     -fx-background-color: #000000;
+}
+.progress-indicator > .determinate-indicator > .progress {
+     -fx-background-color: #000000;
+}
+/* TODO: scaling the shape seems to make it disappear */
+.progress-indicator > .determinate-indicator > .tick {
+     -fx-background-color: #000000;
+}
+.progress-indicator:indeterminate .segment {
+     -fx-background-color: #000000;
+}

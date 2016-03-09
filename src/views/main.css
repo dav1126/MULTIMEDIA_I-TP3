@@ -1,0 +1,27 @@
+
+.MainView 
+{
+	-fx-font-weight:bold;
+	-fx-alignment:center;
+	-fx-padding:20px;
+	-fx-base: #000000;	
+}
+
+.Restreint
+{
+	-fx-padding:0px;	
+}
+
+.MainBox
+{
+	-fx-spacing:20px;
+	-fx-alignment:center;
+}
+
+.SubBox
+{
+	-fx-spacing:5px;
+	-fx-alignment:center;
+}
+
+

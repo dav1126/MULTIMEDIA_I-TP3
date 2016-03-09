@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="root" nodeOrientation="LEFT_TO_RIGHT" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MusiquePaneCtrl">
+   <children>
+      <VBox fx:id="controlPane" minWidth="170.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="200.0" styleClass="MainBox" HBox.hgrow="SOMETIMES">
+         <children>
+            <Label fx:id="lblMusique" text="MUSIQUE" underline="true">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <VBox fx:id="playPaneSlot" minHeight="20.0" VBox.vgrow="ALWAYS" />
+            <CheckBox fx:id="checkRejouer" mnemonicParsing="false" text="Rejouer en boucle" />
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@main.css" />
+      <URL value="@MusiquePane.css" />
+   </stylesheets>
+   <styleClass>
+      <String fx:value="MainView" />
+      <String fx:value="MainBox" />
+   </styleClass>
+</HBox>

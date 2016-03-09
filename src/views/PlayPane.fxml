@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="root" minWidth="170.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="200.0" styleClass="MainBox" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.PlayPaneCtrl">
+   <children>
+      <HBox fx:id="hboxFichier" styleClass="SubBox">
+         <children>
+            <Label minWidth="50.0" text="Pièce :" />
+            <Label fx:id="lblFichier" text="Label" wrapText="true" />
+         </children>
+      </HBox>
+      <VBox fx:id="vboxVolume" styleClass="SubBox">
+         <children>
+            <HBox fx:id="hboxVolume" styleClass="SubBox">
+               <children>
+                  <Label fx:id="lblVolume" text="Volume" />
+                  <Text fx:id="txtVolume" fill="#e4e4e4" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               </children>
+            </HBox>
+            <Slider fx:id="sldrVolume" blockIncrement="0.1" max="1.0" min="0.2" value="0.6" />
+         </children>
+      </VBox>
+      <VBox fx:id="vboxLecture" styleClass="SubBox">
+         <children>
+            <HBox fx:id="hboxLecture" styleClass="SubBox">
+               <children>
+                  <Label fx:id="lblLecture" text="Lecture" />
+                  <Text fx:id="txtLecture" fill="#e4e4e4" strokeType="OUTSIDE" strokeWidth="0.0" />
+               </children>
+            </HBox>
+            <HBox fx:id="hboxProgres" alignment="TOP_CENTER" />
+            <GridPane hgap="1.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="btnJouer" maxWidth="1.7976931348623157E308" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../ressources/1457052212_play-circle-outline.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btnPause" maxWidth="1.7976931348623157E308" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../ressources/1457051760_pause-circle-outline.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btnArret" maxWidth="1.7976931348623157E308" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../ressources/1457051773_24_Stop.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="previousButton" disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../ressources/1457054403_27_Rewind.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="nextButton" disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../ressources/1457054277_26_Forward.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnBackward" maxWidth="1.7976931348623157E308" minWidth="25.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../ressources/1457051110_left_arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btnForward" maxWidth="1.7976931348623157E308" minWidth="25.0" mnemonicParsing="false" GridPane.columnIndex="4">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../ressources/1457051092_right_arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <ProgressBar fx:id="progLecture" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="150.0" progress="0.0" GridPane.columnIndex="1" GridPane.columnSpan="3" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <TextArea fx:id="areaMetadata" editable="false" focusTraversable="false" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES" />
+      <Button fx:id="timelineAnimButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Timeline">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/anim.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+   <stylesheets>
+      <URL value="@main.css" />
+      <URL value="@PlayPane.css" />
+   </stylesheets>
+</VBox>
